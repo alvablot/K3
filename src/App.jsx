@@ -109,14 +109,15 @@ function App() {
         <Route
           path="*"
           element={
-            <main style={{ padding: "1rem" }}>
-              <p>Oj, nu hamnade du fel!</p>
-              <nav>
-                <Link to="/home" style={{color: "black"}}>Hem</Link>
-              </nav>
-            </main>
-          }
-        />
+            <HomeRoute
+              productArray={productArray}
+              addToCart={addToCart}
+              showProducts={showProducts}
+              productDetail={productDetail}
+              value=""
+              summonPrice={summonPrice}
+              totalAmountOfProducts={totalAmountOfProducts}
+            />
       </Routes>
     </div>
   );
